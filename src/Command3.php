@@ -39,6 +39,7 @@ class Command3 extends Command
             }
         }
 
+
         $output->write('Hello, Your name: ' . $name);
         $output->write('. Your age: ' . $age);
         $output->writeln('. Your gender: '.$gender);
