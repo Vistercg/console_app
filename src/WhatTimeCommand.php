@@ -22,7 +22,6 @@ class WhatTimeCommand extends Command
         
         $output->writeln($time->toRfc822String());
         
-	return Command::SUCCESS;
+	      return Command::SUCCESS;
     }
-
 }
