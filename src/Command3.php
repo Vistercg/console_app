@@ -47,3 +47,4 @@ class Command3 extends Command
         return Command::SUCCESS;
     }
 }
+
