@@ -6,4 +6,5 @@ $app = new \Symfony\Component\Console\Application('');
 
 $app->add(new \App\WhatTimeCommand());
 $app->add(new \App\CommandTwo());
+
 $app->run();

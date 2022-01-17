@@ -24,5 +24,4 @@ class WhatTimeCommand extends Command
         
 	return Command::SUCCESS;
     }
-
 }
