@@ -13,7 +13,7 @@ class showsString extends Command
     {
         $this
             ->setName('showsString')
-            ->setDescription('shows the entered string n times')
+            ->setDescription('show text')
             ->addArgument('text', InputArgument::REQUIRED, 'Pass the text.')
             ->addArgument('summ', InputArgument::OPTIONAL);
     }

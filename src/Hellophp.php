@@ -14,7 +14,8 @@ class hellophp extends Command
         $this
             ->setName('say_hello')
             ->setDescription('show you say')
-            ->addArgument('text', InputArgument::REQUIRED, 'Pass the text.');
+            ->addArgument('text', InputArgument::REQUIRED, 'Pass the text.')
+        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -24,5 +25,5 @@ class hellophp extends Command
 
         return Command::SUCCESS;
     }
-}
 
+}
