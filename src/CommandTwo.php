@@ -7,13 +7,13 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 
-class CommandTwo extends Command
+class showsString extends Command
 {
     protected function configure()
     {
         $this
-            ->setName('command2')
-            ->setDescription('show text')
+            ->setName('showsString')
+            ->setDescription('shows the entered string n times')
             ->addArgument('text', InputArgument::REQUIRED, 'Pass the text.')
             ->addArgument('summ', InputArgument::OPTIONAL);
     }
