@@ -24,5 +24,5 @@ class hellophp extends Command
 
         return Command::SUCCESS;
     }
-
 }
+
