@@ -12,16 +12,15 @@ class WhatTimeCommand extends Command
     {
         $this
             ->setName('what_time')
-            ->setDescription('show current time')
-        ;
+            ->setDescription('show current time');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $time = \Carbon\Carbon::now();
-        
+
         $output->writeln($time->toRfc822String());
-        
-	      return Command::SUCCESS;
+
+        return Command::SUCCESS;
     }
 }

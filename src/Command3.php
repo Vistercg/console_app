@@ -8,13 +8,13 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 
-class Command3 extends Command
+class SayHelloCommand extends Command
 {
     protected function configure()
     {
         $this
-            ->setName('command3')
-            ->setDescription('show info');
+            ->setName('SayHelloCommand')
+            ->setDescription('shows the information you entered');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -24,10 +24,10 @@ class Command3 extends Command
         $question = new Question('Please enter your name ', '');
         $name = $helper->ask($input, $output, $question);
 
-        if($name){
+        if ($name) {
             $question = new Question('Please enter your age ', '');
             $age = $helper->ask($input, $output, $question);
-            if($age) {
+            if ($age) {
                 $question = new ChoiceQuestion(
                     'Please choose your gender (defaults to M)',
                     ['Man', 'Woman'],
@@ -39,10 +39,9 @@ class Command3 extends Command
             }
         }
 
-
         $output->write('Hello, Your name: ' . $name);
         $output->write('. Your age: ' . $age);
-        $output->writeln('. Your gender: '.$gender);
+        $output->writeln('. Your gender: ' . $gender);
 
         return Command::SUCCESS;
     }
